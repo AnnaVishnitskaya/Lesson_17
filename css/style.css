@@ -1,0 +1,470 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	
+}
+.header {
+	background: url('../img/header-doggie/background-image.jpg') center/cover no-repeat;
+	min-height: 800px;
+}
+[class*="__container"]{
+	max-width: 1050px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	
+}
+@media (max-width: 1050px) {
+	[class*="__container"] {
+	max-width: 970px;
+	}
+	.header__bottom{
+		padding: 10px 10px;
+		
+	}
+	.header__menu:not(:last-child){
+		margin-right: 5px;
+	}
+	.header__menu{
+		max-width: 400px;
+		
+	}
+	.form{
+		max-width: 200px;
+	}
+
+}
+@media (max-width: 991.98px) {
+	[class*="__container"] {
+		max-width: 750px;
+		}
+		.logo__image {
+			transform: scale(0.8);
+		}
+		.header__boarding *:not(:last-child), .header__call-us *:not(:last-child){
+			margin-bottom: 5px;
+		}
+		.header__button{
+			padding: 10px 0px;
+			font-weight: 300;
+			font-size: 10px;
+			flex: 0 0 auto;
+			margin-left: 15px;
+			}
+		.header__top{
+			flex-wrap: wrap;
+			row-gap: 10px;
+		}
+	}
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: none;
+	}
+	.header__top{
+		/*! Почему-то не работает */
+		display: block;
+	}
+	.header__content{
+		display: block;
+		margin-left: 15px;
+	}
+	.header__button{
+		margin-left: 15px;
+	}
+	.header__bottom{
+		padding: 0;
+	}
+	.header__form, .header__shopping {
+display: none;
+	}
+	.header__menu{
+		max-width: 100%;
+	}
+	.header__list{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+}
+.header__container{
+	padding-top: 26px;
+	
+}
+
+.header__top {
+	display: flex;
+	column-gap: 20px;
+	justify-content: space-between;
+}
+.header__top:not(:last-child), .header__bottom:not(:last-child){
+	margin: 0 0 28px 0;
+}
+.header__logo {
+	flex: 0 0 auto;
+}
+.logo__link {
+}
+.logo__image {
+	max-width: 100%;
+}
+
+.header__content{
+	display: flex;
+	column-gap: 30px;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1.83;
+	letter-spacing: 0.15px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.header__boarding, .header__call-us{
+	padding: 0 0 0 34px;
+	flex: 0 0 auto;
+	
+}
+.header__boarding *:not(:last-child), .header__call-us *:not(:last-child){
+	margin-bottom: 10px;
+	
+}
+.header__boarding::before {
+	content: '';
+	background: url('../img/header-doggie/access_time_24px.svg') 0 0/100% no-repeat;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	margin: 0 0 0 -34px
+}
+.header__call-us::before {
+	content: '';
+	background: url('../img/header-doggie/phone_24px.svg') 0 0/100% no-repeat;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	margin: 0 0 0 -34px
+}
+.header__title {
+	
+}
+.header__call-us{
+	font-weight: 500;
+	
+}
+.header__text {
+	text-transform: none;
+}
+.header__button, .button {
+	align-self: center;
+	background-color: #f2726f;
+	border-radius: 8px;
+	text-align: center;
+	padding: 12px 25px;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1.83;
+	letter-spacing: 0.15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.button__link {
+}
+/* ------------- НИЗ-------------- */
+.header__bottom {
+	background-color: #FFFFFF;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.6;
+	letter-spacing: 0.15px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	/*flex-wrap: wrap;*/
+	min-height: 60px;
+	padding: 10px 40px;
+}
+.header__menu {
+	flex: 0 1 600px;
+}
+/*.header__menu:not(:last-child){
+	margin-right: 80px;
+}*/
+.header__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/*flex-wrap: wrap;*/
+	/*column-gap: 39px;*/
+}
+.list__item {
+	align-self: center;
+	padding: 10px 10px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.57;
+	letter-spacing: 0.15px;
+}
+.list__link {
+	
+	
+}
+.header__interface {
+
+}
+.form {
+	align-self: center;
+	position: relative;
+	flex: 0 1 auto;
+	max-width: 280px;
+}
+.form__input {
+	padding: 10px 20px;
+	
+}
+.form__button {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 7px;
+	left: 183px;
+	background: url('../img/header-doggie/search.svg') 0 0/100% no-repeat;
+}
+/*.form__button::after{
+	content: '';
+	width: 24px;
+	height: 24px;
+	background: url('../img/header-doggie/search.svg') 0 0/100% no-repeat;
+	position: absolute;
+	transform: translate(-27px,-15px);
+	cursor: pointer;
+}*/
+.header__shopping {
+	position: relative;
+}
+.header__link {
+	width: 24px;
+	height: 24px;
+	background: url('../img/header-doggie/shopping_cart.svg') 0px 0px/100% no-repeat;
+	position: absolute;
+	cursor: pointer;
+	top: 10px;
+	left: 0;
+}
+/*.header__link::after{
+	content: '';
+	width: 24px;
+	height: 24px;
+	background: url('../img/header-doggie/shopping_cart.svg') 0px 0px/100% no-repeat;
+	position: absolute;
+	cursor: pointer;
+	transform: translate(22px,8px);
+   background-color: #f2726f;
+}*/
+
+/* ------------------------Вторая страница--------------------------- */
+@media (max-width: 1050px) {
+	[class*="__container"] {
+	max-width: 970px;
+	}
+	.who-we-are__container::before{
+		display: none;
+	}
+
+}
+@media (max-width: 991.98px) {
+	[class*="__container"] {
+		max-width: 750px;
+		}
+		
+}
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: none;
+	}
+	
+}
+
+.main {
+	flex-grow: 1;
+	
+}
+.who-we-are__container {
+	min-height: 730px;
+	margin: -80px auto 0;
+	background-color: #5d62b5;
+	border-radius: 40px;
+	position: relative;
+}
+.who-we-are__container::before {
+	content: "";
+	background: url(../img/page-2/circles.png) 0 0 no-repeat;
+	width: 201px;
+	height: 317px;
+	position: absolute;
+	top: -109px;
+	right: -76px;
+}
+.who-we-are__content {
+	color: #f5f5f5;
+	padding: 100px 0 11px 87px;
+}
+.who-we-are__subtitle {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 2;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	margin: 0px 0px 33px 0px;
+	max-width: 436px;
+	min-height: 17px;
+	position: relative;
+	padding: 0 0 0 33px;
+}
+.who-we-are__subtitle::before {
+	content: "";
+	background: url(../img/page-2/icon.png) 0 0 no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.who-we-are__title {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1.17;
+	max-width: 583px;
+	margin: 0px 0px 36px 0px;
+}
+.who-we-are__text {
+	line-height: 1.5;
+	letter-spacing: 0.15px;
+	color: #ffffff;
+	max-width: 800px;
+	position: relative;
+}
+/*.who-we-are__container::after {
+	content: "";
+	background: url("../img/page-2/spot.png") 0 0 no-repeat;
+	width: 600px;
+	height: 640px;
+	position: absolute;
+	bottom: -190px;
+	left: -5px;
+}*/
+.who-we-are__decor {
+	max-width: 650px;
+	min-height: 370px;
+	margin-top: -200px;
+}
+.who-we-are__image-decor {
+	width: 100%;
+	position: relative;
+	top: 128px;
+	left: -100px;
+	
+
+}
+.picture {
+	max-width: 846px;
+	margin: -300px auto 0;
+	
+}
+.picture__item {
+	max-width: 100%;
+	border-radius: 40px;
+	box-shadow: 0px 16px 24px 0px #26262633, 0px 8px 16px 0px #2626263d;
+	/*position: absolute;
+	top: 400px;
+	left: 52px;*/
+	z-index: 2;
+	position: relative;
+}
+/*----------- Третий--------  */
+@media (max-width: 1050px) {
+	[class*="__container"] {
+	max-width: 970px;
+	}
+	/*.nemo__image{
+		max-width: 500px;
+	}*/
+	
+}
+@media (max-width: 991.98px) {
+	[class*="__container"] {
+		max-width: 750px;
+		}
+		.nemo__picture{
+			flex: 0 1 500px;
+			display: none;
+		}
+		
+}
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: none;
+	}
+	.nemo__body{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.nemo__container {
+		padding: 44px 210px;
+	}
+}
+.nemo {
+	margin-top: 50px;
+	background-color: #25CEC9;
+	color: #ffffff;
+}
+.nemo__container {
+	padding: 44px 50px;
+}
+.nemo__decor{
+	background: url(../img/nemo/tennis-ball.png) right 38% no-repeat,
+	url(../img/nemo/decor1.svg) 0 0 no-repeat,
+	url('../img/nemo/circles.png') 0 50% no-repeat,
+	url('../img/nemo/line.svg') right top no-repeat;
+	position: relative;
+}
+.nemo__body{
+	display: flex;
+	justify-content: space-between;
+}
+.nemo__picture {
+	flex: 0 1 50%;
+}
+
+.nemo__image {
+	max-width: 700px;
+	/*position: relative;
+	transform: translate(-80px,0px);*/
+}
+.nemo__content {
+	flex: 0 0 50%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 42px;
+}
+.nemo__text {
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1.17;
+}
+.nemo__button {
+	
+}
+.button {
+}
+.button__link {
+}
+
+
